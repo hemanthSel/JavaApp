@@ -18,7 +18,7 @@ pipeline{
         stage("STG2: MAVEN TEST"){
             steps{
                 scripts{
-                     'mvn test'
+                     sh 'mvn test'
                 }
             }
         }
