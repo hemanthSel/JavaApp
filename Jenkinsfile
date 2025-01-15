@@ -36,5 +36,14 @@ pipeline{
                 }
             }
         }
+        stage('static code analysis'){
+            steps{
+                script{
+                    withSonarQubeEnv(credentialsId: 'sonar-id') {
+                        sh 'mvn clean package sonar"sonar'
+}
+                }
+            }
+        }
     }        
 }
