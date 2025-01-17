@@ -30,6 +30,19 @@
 	</dependencies>
 
 	<build>
+	<distributionManagement>
+        <!--todo Publish the versioned releases here -->
+        <snapshotRepository>
+            <id>snapshotnexus</id>
+            <name>snapshot nexus</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>releasenexus</id>
+            <name>release nexus</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+	</distributionManagement>	
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
